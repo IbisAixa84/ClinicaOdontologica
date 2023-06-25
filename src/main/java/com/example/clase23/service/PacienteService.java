@@ -4,6 +4,8 @@ import com.example.clase23.dao.IDao;
 import com.example.clase23.model.Paciente;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PacienteService {
     private IDao<Paciente> pacienteIDao;
@@ -23,4 +25,6 @@ public class PacienteService {
     public void actualizarPaciente(Paciente paciente){
         pacienteIDao.actualizar(paciente);
     }
+
+    public List<Paciente> listarTodos(){ return pacienteIDao.listarTodos(); }
 }

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+@Controller
 @RequestMapping("/pacientes")
 public class PacienteController {
     private PacienteService pacienteService;
@@ -15,15 +15,19 @@ public class PacienteController {
     public PacienteController(PacienteService pacienteService) {
         this.pacienteService = pacienteService;
     }
-    @PostMapping
-    public Paciente registrarPaciente(@RequestBody Paciente paciente){
-        return pacienteService.guardarPaciente(paciente);
+    @GetMapping
+    public String buscarPacientePorCorreo(Model model, @RequestParam ("email") String email){
+        Paciente paciente= pacienteService.buscarPacienteXEmail(email);
+        model.addAttribute("nombre",paciente.getNombre());
+        model.addAttribute("apellido",paciente.getApellido());
+        return "index";
     }
     @GetMapping("/{id}")
     public Paciente buscarPaciente(@PathVariable Integer id){
         return pacienteService.buscarPaciente(id);
 
     }
+
     @PutMapping
     public String actualizarPaciente(@RequestBody Paciente paciente){
         //vamos a consultar si ese paciente existe
