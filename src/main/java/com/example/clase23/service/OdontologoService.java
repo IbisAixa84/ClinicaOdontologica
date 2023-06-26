@@ -1,18 +1,19 @@
 package com.example.clase23.service;
 
-import com.example.clase23.dao.IDao;
+import com.example.clase23.repository.IDao;
 import com.example.clase23.model.Odontologo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class OdontologoService {
+
+    @Autowired
     private IDao<Odontologo> odontologoIDao;
 
-    public OdontologoService(IDao<Odontologo> odontologoIDao) {
-        this.odontologoIDao = odontologoIDao;
-    }
+
     public Odontologo guardarOdontologo(Odontologo odontologo){
         return odontologoIDao.guardar(odontologo);
     }

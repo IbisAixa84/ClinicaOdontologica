@@ -1,6 +1,6 @@
 package com.example.clase23;
 
-import com.example.clase23.dao.BD;
+import com.example.clase23.repository.BD;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

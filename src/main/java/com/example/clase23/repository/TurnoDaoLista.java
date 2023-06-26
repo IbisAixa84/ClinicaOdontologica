@@ -1,19 +1,23 @@
-package com.example.clase23.dao;
+package com.example.clase23.repository;
 
 import com.example.clase23.model.Turno;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+@Repository
 public class TurnoDaoLista implements IDao<Turno> {
     private List<Turno> turnos;
     public TurnoDaoLista() { turnos=new ArrayList<>(); }
 
     @Override
     public Turno guardar(Turno turno) {
-        turnos.add(turno);
+        PacienteDAOH2 pacienteDao= new PacienteDAOH2();
+        OdontologoDAOH2 odontologoDao= new OdontologoDAOH2();
+        turno.setPaciente(pacienteDao.buscar(turno.getPaciente().getId()));
+        turno.setOdontologo((odontologoDao.buscar(turno.getOdontologo().getId())));
+;       turnos.add(turno);
         return turno;
     }
 

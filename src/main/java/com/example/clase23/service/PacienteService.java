@@ -1,18 +1,19 @@
 package com.example.clase23.service;
 
-import com.example.clase23.dao.IDao;
+import com.example.clase23.repository.IDao;
 import com.example.clase23.model.Paciente;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class PacienteService {
+
+    @Autowired
     private IDao<Paciente> pacienteIDao;
 
-    public PacienteService(IDao<Paciente> pacienteIDao) {
-        this.pacienteIDao = pacienteIDao;
-    }
+
     public Paciente buscarPacienteXEmail(String email){
         return pacienteIDao.buscarXString(email);
     }

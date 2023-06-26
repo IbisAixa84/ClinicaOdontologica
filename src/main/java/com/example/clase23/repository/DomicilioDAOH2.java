@@ -1,19 +1,19 @@
-package com.example.clase23.dao;
+package com.example.clase23.repository;
 
 import com.example.clase23.model.Domicilio;
-import org.springframework.stereotype.Component;
+import org.apache.log4j.Logger;
+import org.springframework.stereotype.Repository;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.List;
 
-@Component
+@Repository
 public class DomicilioDAOH2 implements IDao<Domicilio>{
 
     private final static String SQL_INSERT="INSERT INTO DOMICILIOS (CALLE, NUMERO,LOCALIDAD, PROVINCIA) VALUES (?,?,?,?)";
     private final static String SQL_BUSCAR="SELECT * FROM DOMICILIOS WHERE ID=?";
+    private final static String SQL_UPDATE="UPDATE DOMICILIOS SET CALLE=?, NUMERO=?, LOCALIDAD=?, PROVINCIA=? WHERE ID=?";
+    private static final Logger LOGGER= Logger.getLogger(DomicilioDAOH2.class);
     @Override
     public Domicilio guardar(Domicilio domicilio) {
         Connection connection=null;
@@ -74,7 +74,27 @@ public class DomicilioDAOH2 implements IDao<Domicilio>{
 
     @Override
     public void actualizar(Domicilio domicilio) {
+        LOGGER.info("Inicializando la operación de actualización del domicilio");
+        Connection connection= null;
+        try{
+            connection= BD.getConnection();
+            PreparedStatement ps_update= connection.prepareStatement(SQL_UPDATE);
+            ps_update.setString(1, domicilio.getCalle());
+            ps_update.setString(2, domicilio.getNumero());
+            ps_update.setString(3, domicilio.getLocalidad());
+            ps_update.setString(4, domicilio.getProvincia());
+            ps_update.setInt(5, domicilio.getId());
+            ps_update.execute();
 
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            try{
+                connection.close();
+            }catch (SQLException ex){
+                ex.printStackTrace();
+            }
+        }
     }
 
     @Override

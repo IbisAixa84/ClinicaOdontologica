@@ -1,15 +1,15 @@
-package com.example.clase23.dao;
+package com.example.clase23.repository;
 
 import com.example.clase23.model.Domicilio;
 import com.example.clase23.model.Paciente;
 import org.apache.log4j.Logger;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+@Repository
 public class PacienteDAOH2 implements IDao<Paciente> {
     private static final Logger LOGGER=Logger.getLogger(PacienteDAOH2.class);
     private static final String SQL_SELECT_ALL="SELECT * FROM PACIENTES";
@@ -168,14 +168,14 @@ public class PacienteDAOH2 implements IDao<Paciente> {
             daoAux.actualizar(paciente.getDomicilio());
             PreparedStatement ps_Update= connection.prepareStatement(SQL_UPDATE);
             //ACA VIENEN LOS SIGNOS DE INTERROGACIÓN
-            ps_Update.setString(1,paciente.getNombre());
+            ps_Update.setString(1, paciente.getNombre());
             ps_Update.setString(2, paciente.getApellido());
             ps_Update.setString(3, paciente.getDocumento());
-            ps_Update.setDate(4,Date.valueOf(paciente.getFechaIngreso()));
+            ps_Update.setDate(4, Date.valueOf(paciente.getFechaIngreso()));
             //de donde sacabamos el dom?
-            ps_Update.setInt(5,paciente.getDomicilio().getId());
+            ps_Update.setInt(5, paciente.getDomicilio().getId());
             ps_Update.setString(6, paciente.getEmail());
-            ps_Update.setInt(7,paciente.getId());
+            ps_Update.setInt(7, paciente.getId());
             ps_Update.execute();
 
         }catch (Exception e){

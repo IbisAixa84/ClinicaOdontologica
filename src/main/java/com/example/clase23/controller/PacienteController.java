@@ -8,11 +8,10 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/pacientes")
 public class PacienteController {
-    private PacienteService pacienteService;
+
     @Autowired
-    public PacienteController(PacienteService pacienteService) {
-        this.pacienteService = pacienteService;
-    }
+    private PacienteService pacienteService;
+
 
     @PostMapping
     public Paciente RegistrarPaciente(@RequestBody Paciente paciente) {

@@ -1,14 +1,15 @@
-package com.example.clase23.dao;
+package com.example.clase23.repository;
 
 import com.example.clase23.model.Odontologo;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+@Repository
 public class OdontologoDAOH2 implements IDao<Odontologo> {
 
     private static final String SQL_INSERT="INSERT INTO ODONTOLOGOS(NOMBRE, APELLIDO, MATRICULA) VALUES(?,?,?)";
