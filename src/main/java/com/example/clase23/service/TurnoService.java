@@ -17,7 +17,8 @@ public class TurnoService {
         return turnoIDao.guardar(turno);
     }
     public Turno buscarTurno(Integer id){ return turnoIDao.buscar(id); }
-    //public Turno eliminarTurno(Integer id){ return turnoIDao.eliminar(id); }
+    public void eliminarTurno(Integer id){ turnoIDao.eliminar(id); }
+    public void actualizarTurno(Turno turno){ turnoIDao.actualizar(turno); }
     public List<Turno> listarTurnos(){
         // mucho código de control
         return turnoIDao.listarTodos();

@@ -19,9 +19,12 @@ public class OdontologoService {
     public Odontologo buscarOdontologo(Integer id){
         return odontologoIDao.buscar(id);
     }
-    public List<Odontologo> listadoOdontologos(){
-        return odontologoIDao.listarTodos();
+    public void actualizarOdontologo(Odontologo odontologo){
+        odontologoIDao.actualizar(odontologo);
     }
+    public void eliminarOdontologo(Integer id) { odontologoIDao.eliminar(id); }
+    public List<Odontologo> listadoOdontologos() { return odontologoIDao.listarTodos(); }
+    public Odontologo buscarXString(String valor) { return odontologoIDao.buscarXString(valor); }
 }
 
 

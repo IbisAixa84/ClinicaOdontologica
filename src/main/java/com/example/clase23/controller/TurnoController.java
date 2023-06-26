@@ -45,15 +45,18 @@ public class TurnoController {
         return response;
     }
 
-    /*@DeleteMapping("eliminar/{id}")
-    public ResponseEntity<Turno> eliminarTurno (@PathVariable Integer id){
-        Turno turnoBuscado= turnoService.buscarTurno(id);
-        ResponseEntity<Turno> response;
-        if (turnoBuscado != null){
-            response= ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    @DeleteMapping("eliminar/{id}")
+    public ResponseEntity<Turno> eliminarTurno (@PathVariable Integer id) {
+        Turno turnoBuscado = turnoService.buscarTurno(id);
+        ResponseEntity<Turno> response = null;
+        if (turnoBuscado != null) {
+            response = ResponseEntity.ok(turnoService.guardarTurno(turnoBuscado));
+        }else{
+            //build solo devolvemos el codigo bad request no el body
+            response = ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
         return response;
-    }*/
+    }
 
     @PutMapping("/actualizar")
     public ResponseEntity<Turno> actualizarTurno (@PathVariable Integer id){
@@ -61,7 +64,7 @@ public class TurnoController {
     }
 
     @GetMapping("/buscar/{id}")
-    public ResponseEntity<Turno> buscarTurnoPorId (@PathVariable Integer id){
+    public ResponseEntity<Turno> buscarTurno (@PathVariable Integer id){
         return null;
     }
 }

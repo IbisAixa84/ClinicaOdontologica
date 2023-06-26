@@ -25,6 +25,7 @@ public class PacienteService {
     public void actualizarPaciente(Paciente paciente){
         pacienteIDao.actualizar(paciente);
     }
-
+    public void eliminarPaciente(Integer id) { pacienteIDao.eliminar(id); }
     public List<Paciente> listarTodos(){ return pacienteIDao.listarTodos(); }
+
 }

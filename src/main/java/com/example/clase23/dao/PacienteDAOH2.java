@@ -1,9 +1,7 @@
 package com.example.clase23.dao;
 
-import com.example.clase23.dao.BD;
 import com.example.clase23.model.Domicilio;
 import com.example.clase23.model.Paciente;
-import com.example.clase23.service.PacienteService;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
@@ -18,6 +16,9 @@ public class PacienteDAOH2 implements IDao<Paciente> {
     private static final String SQL_SELECT_ONE="SELECT * FROM PACIENTES WHERE ID=?";
     private static final String SQL_SELECT_BY_EMAIL="SELECT * FROM PACIENTES WHERE EMAIL=?";
     private static final String SQL_UPDATE="UPDATE PACIENTES SET NOMBRE=?, APELLIDO=?, DOCUMENTO=?, FECHA_INGRESO=?, DOMICILIO_ID=?, EMAIL=? WHERE ID=?";
+    private static final String SQL_ELIMINAR="DELETE FROM PACIENTES WHERE ID=?";
+    private static final String SQL_ACTUALIZAR="UPDATE PACIENTES SET NOMBRE=?, APELLIDO=?, DOCUMENTO=?, FECHAINGRESO=?, DOMICILIO=?, EMAIL=? WHERE ID=?";
+    private static final String SQL_BUSCAR_EMAIL_PACIENTE="SELECT * FROM PACIENTES WHERE EMAIL=?";
     private final static String SQL_DROP_CREATE_2="DROP TABLE IF EXISTS PACIENTES;" +
             "CREATE TABLE PACIENTES (ID INT AUTO_INCREMENT PRIMARY KEY, NOMBRE VARCHAR(100) NOT NULL," +
             " APELLIDO VARCHAR(100) NOT NULL, DOCUMENTO VARCHAR(100) NOT NULL, FECHA_INGRESO DATE NOT NULL," +
@@ -127,6 +128,7 @@ public class PacienteDAOH2 implements IDao<Paciente> {
 
     @Override
     public Paciente buscar(Integer id) {
+        LOGGER.debug("Ingresamos al metodo buscra paciente por ID");
         Connection connection= null;
         Paciente paciente=null;
         Domicilio domicilio=null;
