@@ -18,7 +18,12 @@ public class BD {
             "CREATE TABLE PACIENTES (ID INT AUTO_INCREMENT PRIMARY KEY, NOMBRE VARCHAR(100) NOT NULL," +
             " APELLIDO VARCHAR(100) NOT NULL, DOCUMENTO VARCHAR(100) NOT NULL, FECHA_INGRESO DATE NOT NULL," +
             " DOMICILIO_ID INT, EMAIL VARCHAR(100) NOT NULL)";
-    private final static String SQL_PRUEBA="INSERT INTO DOMICILIOS (CALLE, NUMERO, LOCALIDAD, PROVINCIA) " +
+
+    private final static String SQL_DROP_CREATE_ODONTOLOGOS="DROP TABLE IF EXISTS ODONTOLOGOS; " +
+            "CREATE TABLE ODONTOLOGOS (ID INT AUTO_INCREMENT PRIMARY KEY, NOMBRE VARCHAR(100) NOT NULL, APELLIDO VARCHAR(100) NOT NULL, MATRICULA VARCHAR(100) NOT NULL)";
+    private final static String SQL_PRUEBA="INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO)" +
+            "VALUES ('563','Maria','Lopez'), ('231','Luna','Morales');" +
+            "INSERT INTO DOMICILIOS (CALLE, NUMERO, LOCALIDAD, PROVINCIA) " +
             "VALUES('CALLE210A','1234','SOURIGUES','BS AS'), ('CALLE SIEMPRE VIVA','742','SPRINFIELD',' USA'); " +
             "INSERT INTO PACIENTES (NOMBRE, APELLIDO, DOCUMENTO, FECHA_INGRESO, DOMICILIO_ID, EMAIL) VALUES('PEPE','MUJICA','123','2022-05-08',1,'jorgito@gmail.com'),('SOL','VASQUEZ','12233','2022-10-25',2,'guillermo@gmail.com')";
 
@@ -34,6 +39,7 @@ public class BD {
             Statement statement= connection.createStatement();
             statement.execute(SQL_DROP_CREATE);
             statement.execute(SQL_DROP_CREATE_2);
+            statement.execute(SQL_DROP_CREATE_ODONTOLOGOS);
             statement.execute(SQL_PRUEBA);
         }
         catch (Exception e){
