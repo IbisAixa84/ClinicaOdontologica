@@ -29,11 +29,10 @@ public class TurnoController {
         this.pacienteService = pacienteService;
     }
 
-    // ---------------------------REGISTAR TURNOS-------------------------------------
+
     @PostMapping
     public ResponseEntity<TurnoDto> registrarTurno(@RequestBody Turno turno) throws BadRequestException {
        //ResponseEntity<TurnoDto> response;
-
         // Buscar el paciente por su ID
         Optional<Paciente> pacienteBuscado = pacienteService.buscarPacientePorID(turno.getPaciente().getId());
         // Buscar el odontólogo por su ID
@@ -51,7 +50,7 @@ public class TurnoController {
         }
         //return response;
     }
-    // --------------------------------ELIMINA TURNO--------------------------------
+
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> eliminarTurno (@PathVariable Long id) throws ResourceNotFoundException {
@@ -68,7 +67,7 @@ public class TurnoController {
         }
 
     }
-    //------------------------------ACTUALIZA TURNO----------------------------------
+
    @PutMapping
     public ResponseEntity<String> actualizarTurno (@RequestBody Turno turno)throws BadRequestException{
       Optional<TurnoDto> turnoBuscado= turnoService.buscarTurnoPorID(turno.getId());
@@ -86,7 +85,7 @@ public class TurnoController {
         }
     }
 
-    //--------------------------BUSCA POR ID TURNO--------------------------------------
+
 
     @GetMapping("/{id}")
     public ResponseEntity<TurnoDto> buscarTurnoPorId (@PathVariable Long id)throws ResourceNotFoundException{
@@ -98,7 +97,7 @@ public class TurnoController {
             //return ResponseEntity.notFound().build();
         }
     }
-    // ---------------------------LISTAR TURNOS-------------------------------------
+
     @GetMapping("/listar")
     public ResponseEntity<List<TurnoDto>> traerTodosLosTurnos() {
         return ResponseEntity.ok(turnoService.listarTurnos());

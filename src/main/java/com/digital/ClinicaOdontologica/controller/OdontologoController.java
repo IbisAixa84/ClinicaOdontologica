@@ -13,12 +13,16 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/odontologos")
 public class OdontologoController {
-    @Autowired
+
     private OdontologoService odontologoService;
+    @Autowired
+    private OdontologoService setOdontologoService(OdontologoService odontologoService){
+        return this.odontologoService = odontologoService;
+    }
 
     //---------------------POST GUARDAR ODONTOLOGO  --------------------------------
     @PostMapping
-    public ResponseEntity<Odontologo> guardarOdontologo(@RequestBody Odontologo odontologo) {
+    public ResponseEntity<Odontologo> guardarOdontologo(@RequestBody Odontologo odontologo) throws BadRequestException {
         Odontologo odontologoCreado= odontologoService.guardarOdontologo(odontologo);
         return  ResponseEntity.ok(odontologoCreado);
     }

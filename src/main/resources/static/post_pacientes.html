@@ -27,7 +27,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -40,7 +40,7 @@
                                     <hr class="dropdown-divider">
                                 </li>
                                 <li><a class="dropdown-item" href="get_turnos.html">Listar Turnos</a></li>
-
+                              </li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -54,6 +54,8 @@
                                     <hr class="dropdown-divider">
                                 </li>
                                 <li><a class="dropdown-item" href="get_odontologos.html">Listar Odontologos</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
 
                             </ul>
                         </li>
@@ -80,52 +82,76 @@
         </nav>
     </div>
 </header>
-<section class="carousel ">
-    <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+
+<section class=" container my-5">
+    <ul class="nav nav-pills justify-content-end bg-success bg-opacity-10 p-2 rounded" >
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="get_pacientes.html">Ver Listado</a>
+        </li>
+    </ul>
+    <div class="container">
+        <div class="bg-success bg-opacity-10 p-4 rounded mt-5">
+            <h2 class="mb-4 text-center">Registro Paciente</h2>
+            <form id="add_new_paciente">
+                <div class="form-group row">
+                    <div class="form-group col-md-6">
+                        <label for="nombre" class="control-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="apellido" class="control-label">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" placeholder="Apellido" name="apellido"
+                               required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="form-group col-md-6">
+                        <label for="email" class="control-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="email" name="email" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="dni" class="control-label">DNI</label>
+                        <input type="text" class="form-control" id="dni" placeholder="DNI" name="dni" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="fechaIngreso" class="control-label">Fecha de ingreso</label>
+                        <input type="date" class="form-control" id="fechaIngreso" name="fechaIngreso" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <h5 class="mt-2">Domicilio</h5>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="form-group col-md-6">
+                        <label for="calle" class="control-label">Calle</label>
+                        <input type="text" class="form-control" id="calle" placeholder="Calle" name="calle" required>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="numero" class="control-label">Número</label>
+                        <input type="text" class="form-control" id="numero" placeholder="nro" name="numero" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="localidad" class="control-label">Localidad</label>
+                        <input type="text" class="form-control" id="localidad" placeholder="Localidad" name="localidad"
+                               required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="provincia" class="control-label">Provincia</label>
+                        <input type="text" class="form-control" id="provincia" placeholder="Provincia" name="provincia"
+                               required>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <button type="submit" class="btn btn-secondary">Guardar</button>
+                </div>
+            </form>
         </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="./imagenes/carusel01.jpg" class="img-tam" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h2>Administración de Odontologos</h2>
-                    <p>Nos permite agregar, modificar, borrar y listar.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="./imagenes/carusel02.jpg" class="img-tam" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h2>Administración de Pacientes</h2>
-                    <p>Nos permite agregar, modificar, borrar y listar.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="./imagenes/carusel03.jpg" class="img-tam" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h2>Gestión de Turnos</h2>
-                    <p>Asignar a un paciente un odontologo y dar una fecha.</p>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
 </section>
-<section class="nosotros my-5"/>
 
 
 <footer class="text-center">
@@ -135,6 +161,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/post_paciente.js"></script>
 </body>
 
 </html>

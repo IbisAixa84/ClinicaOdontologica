@@ -1,5 +1,6 @@
 package com.digital.ClinicaOdontologica.controller;
 
+import com.digital.ClinicaOdontologica.dto.PacienteDto;
 import com.digital.ClinicaOdontologica.entities.Paciente;
 import com.digital.ClinicaOdontologica.exception.BadRequestException;
 import com.digital.ClinicaOdontologica.exception.ResourceNotFoundException;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
+//import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
 @RestController
 @RequestMapping("/pacientes")
@@ -19,14 +20,14 @@ public class PacienteController {
 
     private PacienteService pacienteService;
     @Autowired
-    public PacienteController(PacienteService pacienteService) {
-        this.pacienteService = pacienteService;
+    public PacienteService setPacienteService(PacienteService pacienteService) {
+        return this.pacienteService = pacienteService;
     }
 
     //---------------------POST GUARDAR PACIENTE --------------------------------
     @PostMapping
-    public ResponseEntity<Paciente> guardarPaciente(@RequestBody Paciente paciente) {
-        return ResponseEntity.ok(pacienteService.guardarPaciente(paciente));
+    public ResponseEntity<PacienteDto> guardarPaciente(@RequestBody Paciente paciente) throws BadRequestException {
+        return ResponseEntity.ok(new PacienteDto());
     }
 
     //----------------------GET LISTAR PACIENTE ------------------------
