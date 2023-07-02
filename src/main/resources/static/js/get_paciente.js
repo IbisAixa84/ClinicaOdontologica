@@ -55,7 +55,7 @@ window.addEventListener('load', function () {
     (function(){
         let pathname = window.location.pathname;
         if (pathname == "/get_pacientes.html") {
-            document.querySelector(".nav .nav-item a:last").addClass("active");
+            document.querySelector(".nav .nav-item ").addClass("active");
         }
     })
 

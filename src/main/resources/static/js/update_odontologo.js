@@ -7,9 +7,10 @@ window.addEventListener('load', function () {
 
         const formData = {
             id: document.querySelector('#odontologo_id').value,
+            matricula: document.querySelector('#matricula').value,
             nombre: document.querySelector('#nombre').value,
             apellido: document.querySelector('#apellido').value,
-            matricula: document.querySelector('#matricula').value,
+
 
         };
 

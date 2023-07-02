@@ -36,3 +36,16 @@
 [2023-07-01 03:17:49] [ ERROR] [GlobalException:22] La lista se encuentra vacia
 [2023-07-01 03:26:15] [ ERROR] [GlobalException:22] No se puede listar odontologos, no hay datos
 [2023-07-01 03:26:19] [ ERROR] [GlobalException:22] La lista se encuentra vacia
+[2023-07-01 16:36:29] [ ERROR] [GlobalException:22] No se puede listar odontologos, no hay datos
+[2023-07-01 16:36:34] [ ERROR] [GlobalException:22] La lista se encuentra vacia
+[2023-07-01 17:06:24] [ ERROR] [OdontologoService:37] debe ingresar un id valido
+[2023-07-01 17:06:36] [ ERROR] [OdontologoService:37] debe ingresar un id valido
+[2023-07-01 17:06:41] [ ERROR] [GlobalException:22] La lista se encuentra vacia
+[2023-07-01 17:07:43] [ ERROR] [GlobalException:22] La lista se encuentra vacia
+[2023-07-01 21:07:30] [ ERROR] [GlobalException:22] La lista se encuentra vacia
+[2023-07-01 21:09:48] [ ERROR] [GlobalException:22] La lista se encuentra vacia
+[2023-07-01 23:34:55] [ ERROR] [GlobalException:22] No se puede listar odontologos, no hay datos
+[2023-07-01 23:35:39] [ ERROR] [OdontologoService:37] debe ingresar un id valido
+[2023-07-01 23:37:19] [ ERROR] [GlobalException:22] La lista se encuentra vacia
+[2023-07-01 23:37:23] [ ERROR] [GlobalException:22] La lista se encuentra vacia
+[2023-07-01 23:37:34] [ ERROR] [GlobalException:22] El paciente o el odontologo no existen
