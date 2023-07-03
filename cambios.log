@@ -49,3 +49,149 @@
 [2023-07-01 23:37:19] [ ERROR] [GlobalException:22] La lista se encuentra vacia
 [2023-07-01 23:37:23] [ ERROR] [GlobalException:22] La lista se encuentra vacia
 [2023-07-01 23:37:34] [ ERROR] [GlobalException:22] El paciente o el odontologo no existen
+[2023-07-02 00:18:44] [ ERROR] [OdontologoService:37] debe ingresar un id valido
+[2023-07-02 00:19:00] [ INFO ] [OdontologoService:40] Se elimino Odontologo correctamente
+[2023-07-02 00:19:00] [ INFO ] [OdontologoService:40] Se elimino Odontologo correctamente
+[2023-07-02 00:19:55] [ ERROR] [GlobalException:22] La lista se encuentra vacia
+[2023-07-02 00:30:37] [ ERROR] [GlobalException:22] La lista se encuentra vacia
+[2023-07-02 00:30:40] [ ERROR] [GlobalException:22] La lista se encuentra vacia
+[2023-07-02 01:44:52] [ INFO ] [OdontologoService:40] Se elimino Odontologo correctamente
+[2023-07-02 01:47:47] [ ERROR] [GlobalException:22] La lista se encuentra vacia
+[2023-07-02 02:01:43] [ ERROR] [GlobalException:22] No se puede listar odontologos, no hay datos
+[2023-07-02 02:03:24] [ ERROR] [GlobalException:22] No se puede listar odontologos, no hay datos
+[2023-07-02 04:12:01] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-02 04:12:19] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-02 04:12:27] [ ERROR] [GlobalException:22] La lista se encuentra vacia
+[2023-07-02 04:16:50] [ ERROR] [GlobalException:22] La lista se encuentra vacia
+[2023-07-02 04:16:57] [ ERROR] [GlobalException:22] No se puede listar odontologos, no hay datos
+[2023-07-02 04:17:02] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-02 04:17:21] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-02 04:24:26] [ ERROR] [GlobalException:22] No se puede listar odontologos, no hay datos
+[2023-07-02 04:26:07] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-02 04:31:04] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-02 04:31:18] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-02 04:33:39] [ ERROR] [GlobalException:22] La lista se encuentra vacia
+[2023-07-02 04:34:00] [ ERROR] [GlobalException:22] El paciente o el odontologo no existen
+[2023-07-02 04:35:06] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-02 04:35:13] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-02 23:23:16] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-02 23:23:22] [ ERROR] [OdontologoService:37] Ingresar un id valido
+[2023-07-02 23:23:23] [ INFO ] [OdontologoService:40] Se elimino Odontologo correctamente
+[2023-07-02 23:23:24] [ INFO ] [OdontologoService:40] Se elimino Odontologo correctamente
+[2023-07-02 23:23:30] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-02 23:23:34] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-02 23:23:41] [ ERROR] [OdontologoService:37] Ingresar un id valido
+[2023-07-02 23:23:42] [ INFO ] [OdontologoService:40] Se elimino Odontologo correctamente
+[2023-07-02 23:23:42] [ INFO ] [OdontologoService:40] Se elimino Odontologo correctamente
+[2023-07-02 23:23:52] [ ERROR] [GlobalException:22] El paciente o el odontologo no existen
+[2023-07-02 23:24:07] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-02 23:24:49] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-02 23:26:31] [ INFO ] [OdontologoService:40] Se elimino Odontologo correctamente
+[2023-07-02 23:26:32] [ INFO ] [OdontologoService:40] Se elimino Odontologo correctamente
+[2023-07-02 23:26:32] [ ERROR] [OdontologoService:37] Ingresar un id valido
+[2023-07-02 23:29:38] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-02 23:29:58] [ ERROR] [GlobalException:22] La lista se encuentra vacia
+[2023-07-02 23:32:34] [ ERROR] [OdontologoService:37] Ingresar un id valido
+[2023-07-02 23:32:35] [ INFO ] [OdontologoService:40] Se elimino Odontologo correctamente
+[2023-07-02 23:33:01] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-02 23:33:34] [ INFO ] [OdontologoService:40] Se elimino Odontologo correctamente
+[2023-07-02 23:33:34] [ ERROR] [OdontologoService:37] Ingresar un id valido
+[2023-07-02 23:34:39] [ ERROR] [OdontologoService:37] Ingresar un id valido
+[2023-07-02 23:34:48] [ ERROR] [OdontologoService:37] Ingresar un id valido
+[2023-07-02 23:34:58] [ ERROR] [OdontologoService:37] Ingresar un id valido
+[2023-07-02 23:36:26] [ ERROR] [GlobalException:22] No se puede listar odontologos, no hay datos
+[2023-07-02 23:36:34] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-02 23:36:43] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-02 23:37:58] [ INFO ] [OdontologoService:40] Se elimino Odontologo correctamente
+[2023-07-02 23:38:00] [ INFO ] [OdontologoService:40] Se elimino Odontologo correctamente
+[2023-07-02 23:38:03] [ ERROR] [GlobalException:22] No se puede listar odontologos, no hay datos
+[2023-07-02 23:38:11] [ ERROR] [GlobalException:22] La lista se encuentra vacia
+[2023-07-02 23:38:12] [ ERROR] [GlobalException:22] No se puede listar odontologos, no hay datos
+[2023-07-02 23:39:37] [ ERROR] [GlobalException:22] La lista se encuentra vacia
+[2023-07-02 23:39:43] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-02 23:39:58] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-02 23:56:32] [ INFO ] [OdontologoController:40] Listando odontologos...
+[2023-07-02 23:57:01] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-02 23:57:02] [ INFO ] [OdontologoController:40] Listando odontologos...
+[2023-07-02 23:57:32] [ INFO ] [OdontologoController:50] Odontologo con id= 21 fue encontrado
+[2023-07-02 23:57:50] [ INFO ] [OdontologoController:78] Odontologo con id= 21 fue actualizado correctamente.
+[2023-07-02 23:57:50] [ INFO ] [OdontologoController:40] Listando odontologos...
+[2023-07-02 23:58:25] [ INFO ] [PacienteController:36] Paciente creado
+[2023-07-02 23:58:32] [ INFO ] [PacienteController:48] Listando pacientes...
+[2023-07-02 23:59:19] [ INFO ] [PacienteController:36] Paciente creado
+[2023-07-02 23:59:21] [ INFO ] [PacienteController:48] Listando pacientes...
+[2023-07-02 23:59:42] [ INFO ] [PacienteController:48] Listando pacientes...
+[2023-07-02 23:59:54] [ INFO ] [OdontologoController:40] Listando odontologos...
+[2023-07-03 00:00:02] [ INFO ] [PacienteController:48] Listando pacientes...
+[2023-07-03 00:00:10] [ INFO ] [PacienteController:48] Listando pacientes...
+[2023-07-03 00:00:14] [ INFO ] [OdontologoController:40] Listando odontologos...
+[2023-07-03 00:01:06] [ INFO ] [PacienteController:48] Listando pacientes...
+[2023-07-03 00:03:17] [ INFO ] [OdontologoController:40] Listando odontologos...
+[2023-07-03 00:03:22] [ INFO ] [PacienteController:48] Listando pacientes...
+[2023-07-03 00:13:54] [ INFO ] [OdontologoController:40] Listando odontologos...
+[2023-07-03 00:13:58] [ INFO ] [PacienteController:48] Listando pacientes...
+[2023-07-03 00:14:01] [ INFO ] [TurnoController:112] Listando turnos...
+[2023-07-03 00:14:30] [ INFO ] [TurnoController:112] Listando turnos...
+[2023-07-03 00:14:39] [ INFO ] [TurnoController:102] El turno con el id= 2 fue encontrado en la base de datos
+[2023-07-03 00:15:28] [ INFO ] [PacienteController:48] Listando pacientes...
+[2023-07-03 00:15:31] [ INFO ] [TurnoController:112] Listando turnos...
+[2023-07-03 00:15:34] [ INFO ] [TurnoController:112] Listando turnos...
+[2023-07-03 00:15:43] [ INFO ] [TurnoController:102] El turno con el id= 2 fue encontrado en la base de datos
+[2023-07-03 00:15:59] [ INFO ] [TurnoController:112] Listando turnos...
+[2023-07-03 00:16:00] [ INFO ] [TurnoController:84] Se ha actualizado correctamente el turno 2
+[2023-07-03 00:16:10] [ INFO ] [TurnoController:112] Listando turnos...
+[2023-07-03 00:16:16] [ INFO ] [TurnoController:102] El turno con el id= 2 fue encontrado en la base de datos
+[2023-07-03 00:16:30] [ INFO ] [PacienteController:48] Listando pacientes...
+[2023-07-03 00:16:34] [ INFO ] [TurnoController:112] Listando turnos...
+[2023-07-03 00:16:36] [ INFO ] [TurnoController:102] El turno con el id= 2 fue encontrado en la base de datos
+[2023-07-03 00:17:18] [ INFO ] [TurnoController:84] Se ha actualizado correctamente el turno 2
+[2023-07-03 00:17:18] [ INFO ] [TurnoController:112] Listando turnos...
+[2023-07-03 00:17:26] [ INFO ] [TurnoController:67] Se elimino el turno correctamente el id: 3
+[2023-07-03 00:17:30] [ INFO ] [TurnoController:112] Listando turnos...
+[2023-07-03 00:17:33] [ INFO ] [TurnoController:102] El turno con el id= 2 fue encontrado en la base de datos
+[2023-07-03 00:17:39] [ INFO ] [TurnoController:84] Se ha actualizado correctamente el turno 2
+[2023-07-03 00:17:39] [ INFO ] [TurnoController:112] Listando turnos...
+[2023-07-03 00:26:04] [ ERROR] [GlobalException:22] No se puede listar odontologos, no hay datos
+[2023-07-03 00:26:10] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-03 00:26:21] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-03 00:26:22] [ INFO ] [OdontologoController:40] Listando odontologos...
+[2023-07-03 00:26:30] [ INFO ] [OdontologoController:50] Odontologo con id= 2 fue encontrado
+[2023-07-03 00:26:59] [ INFO ] [OdontologoController:78] Odontologo con id= 2 fue actualizado correctamente.
+[2023-07-03 00:26:59] [ INFO ] [OdontologoController:40] Listando odontologos...
+[2023-07-03 00:27:03] [ ERROR] [OdontologoService:37] Ingresar un id valido
+[2023-07-03 00:27:03] [ INFO ] [OdontologoController:64] Odontologo con id= 1 fue eliminado
+[2023-07-03 00:27:07] [ INFO ] [OdontologoController:40] Listando odontologos...
+[2023-07-03 00:27:13] [ INFO ] [OdontologoService:40] Se elimino Odontologo correctamente
+[2023-07-03 00:27:13] [ INFO ] [OdontologoController:64] Odontologo con id= 2 fue eliminado
+[2023-07-03 00:27:17] [ INFO ] [OdontologoController:40] Listando odontologos...
+[2023-07-03 00:27:20] [ ERROR] [OdontologoService:37] Ingresar un id valido
+[2023-07-03 00:27:20] [ INFO ] [OdontologoController:64] Odontologo con id= 1 fue eliminado
+[2023-07-03 00:27:24] [ INFO ] [OdontologoController:40] Listando odontologos...
+[2023-07-03 00:27:26] [ ERROR] [OdontologoService:37] Ingresar un id valido
+[2023-07-03 00:27:26] [ INFO ] [OdontologoController:64] Odontologo con id= 1 fue eliminado
+[2023-07-03 00:27:29] [ INFO ] [OdontologoController:40] Listando odontologos...
+[2023-07-03 00:27:35] [ ERROR] [OdontologoService:37] Ingresar un id valido
+[2023-07-03 00:27:35] [ INFO ] [OdontologoController:64] Odontologo con id= 1 fue eliminado
+[2023-07-03 00:27:41] [ INFO ] [OdontologoController:40] Listando odontologos...
+[2023-07-03 00:27:44] [ ERROR] [OdontologoService:37] Ingresar un id valido
+[2023-07-03 00:27:44] [ INFO ] [OdontologoController:64] Odontologo con id= 1 fue eliminado
+[2023-07-03 00:27:50] [ ERROR] [GlobalException:22] La lista se encuentra vacia
+[2023-07-03 00:27:53] [ INFO ] [OdontologoController:40] Listando odontologos...
+[2023-07-03 00:28:03] [ ERROR] [OdontologoService:37] Ingresar un id valido
+[2023-07-03 00:28:03] [ INFO ] [OdontologoController:64] Odontologo con id= 1 fue eliminado
+[2023-07-03 00:31:28] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-03 00:31:37] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-03 00:31:38] [ INFO ] [OdontologoController:40] Listando odontologos...
+[2023-07-03 00:31:41] [ ERROR] [OdontologoService:37] Ingresar un id valido
+[2023-07-03 00:31:41] [ INFO ] [OdontologoController:64] Odontologo con id= 2 fue eliminado
+[2023-07-03 00:34:31] [ ERROR] [GlobalException:22] No se puede listar odontologos, no hay datos
+[2023-07-03 00:34:39] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-03 00:34:46] [ INFO ] [OdontologoController:28] Odontologo creado
+[2023-07-03 00:34:48] [ INFO ] [OdontologoController:40] Listando odontologos...
+[2023-07-03 00:34:52] [ INFO ] [OdontologoService:39] Se elimino Odontologo correctamente
+[2023-07-03 00:34:52] [ INFO ] [OdontologoController:64] Odontologo con id= 2 fue eliminado
+[2023-07-03 00:34:58] [ INFO ] [OdontologoController:40] Listando odontologos...
+[2023-07-03 00:35:00] [ INFO ] [OdontologoService:39] Se elimino Odontologo correctamente
+[2023-07-03 00:35:00] [ INFO ] [OdontologoController:64] Odontologo con id= 1 fue eliminado
+[2023-07-03 00:44:56] [ INFO ] [TurnoController:112] Listando turnos...
+[2023-07-03 00:45:05] [ ERROR] [GlobalException:22] No se puede listar odontologos, no hay datos

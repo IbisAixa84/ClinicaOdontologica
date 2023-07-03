@@ -19,10 +19,23 @@ public class DataLoader implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        String pass="password";
-        String passCifrada= passwordEncoder.encode(pass);
 
-        usuarioService.guardarUsuario(new AppUsuario("Pablo", "Sayago", "sayago@gmail", passCifrada, AppUsuarioRol.ROLE_USER));
+        String passAdmin="password";
+        String passCifradoAdmin= passwordEncoder.encode(passAdmin);
+
+        usuarioService.guardarUsuario(new AppUsuario("Pablo", "Sayago", "sayago@gmail", passCifradoAdmin, AppUsuarioRol.ROLE_ADMIN));
+        System.out.println("La contraseña cifrada es: "+passCifradoAdmin);
+
+        //ROL USUARIO
+        String passUser="password";
+        String passCifradoUser= passwordEncoder.encode(passUser);
+        System.out.println("La contraseña cifrada es: "+passCifradoUser);
+        usuarioService.guardarUsuario(new AppUsuario("Ibis","Fortunato","ibis@gmail",passCifradoUser, AppUsuarioRol.ROLE_USER));
+        //ROL CEO
+        String passCeo="password";
+        String passCifradoCeo= passwordEncoder.encode(passUser);
+        System.out.println("La contraseña cifrada es: "+passCifradoCeo);
+        usuarioService.guardarUsuario(new AppUsuario("Lauta","Diosquez","lautag@gmail",passCifradoUser, AppUsuarioRol.ROLE_CEO));
 
     }
 }

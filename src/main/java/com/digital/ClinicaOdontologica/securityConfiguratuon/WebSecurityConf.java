@@ -36,15 +36,22 @@ public class WebSecurityConf extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http
+
+                //desactivamos las referencias cruzadas// en un proyecto real lo tenemos que activar
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/get_turnos.html","/turnos","/post_turnos.html").hasAnyRole("USER","ADMIN")
-                .antMatchers("/get_pacientes.html","/post_pacientes.html").hasRole("USER")
-                .antMatchers("/get_odontologos.html","/post_odontologos.html").hasRole("USER")
+                //ACA DOY LOS PERMISOS
+                //SOLO DA PERMISO A UNO SOLO
+//                .antMatchers("/odontologos/**","/turnos/**","/pacientes/**").hasRole("ADMIN")
+                //DA PERMISO A LOS DOS USUARIOS
+                .antMatchers("/turnos/**","/pacientes/**","/odontologos/**").hasAnyRole("ADMIN","USER")
+                //SI ESTAS LOGUEADO ACCEDES
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .and()
-                .logout();
+                .logout()
+                .logoutUrl("/logout");
     }
+
 }

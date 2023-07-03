@@ -5,6 +5,8 @@ import com.digital.ClinicaOdontologica.entities.Paciente;
 import com.digital.ClinicaOdontologica.exception.BadRequestException;
 import com.digital.ClinicaOdontologica.exception.ResourceNotFoundException;
 import com.digital.ClinicaOdontologica.service.PacienteService;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,15 +21,20 @@ import java.util.Optional;
 public class PacienteController {
 
     private PacienteService pacienteService;
+
+    Logger logger = Logger.getLogger(PacienteController.class);
+
     @Autowired
-    public PacienteService setPacienteService(PacienteService pacienteService) {
-        return this.pacienteService = pacienteService;
+    public PacienteController(PacienteService pacienteService) {
+        this.pacienteService = pacienteService;
     }
+
 
     //---------------------POST GUARDAR PACIENTE --------------------------------
     @PostMapping
-    public ResponseEntity<PacienteDto> guardarPaciente(@RequestBody Paciente paciente) throws BadRequestException {
-        return ResponseEntity.ok(new PacienteDto());
+    public ResponseEntity<Paciente> guardarPaciente(@RequestBody Paciente paciente) {
+        logger.log(Level.INFO,"Paciente creado");
+        return ResponseEntity.ok(pacienteService.guardarPaciente(paciente));
     }
 
     //----------------------GET LISTAR PACIENTE ------------------------
@@ -38,6 +45,7 @@ public class PacienteController {
             //return ResponseEntity.badRequest().build();
             throw new BadRequestException("La lista se encuentra vacia");
         }else{
+            logger.log(Level.INFO,"Listando pacientes...");
             return ResponseEntity.ok(pacientes);
         }
     }
@@ -49,6 +57,7 @@ public class PacienteController {
         Optional<Paciente> pacienteBuscado = pacienteService.buscarPacientePorID(id);
         if(pacienteBuscado.isPresent()){
             pacienteService.eliminarPaciente(id);
+            logger.log(Level.INFO,"Paciente con id= " + id + " fue eliminado");
             return ResponseEntity.ok("Se elimino correctamente el paciente con id: "+ id);
         }else {
             //no existe para eliminar el paciente
@@ -62,6 +71,7 @@ public class PacienteController {
     public ResponseEntity<Paciente> buscarPacientePorId(@PathVariable Long id)throws ResourceNotFoundException{
         Optional<Paciente> pacienteBuscado= pacienteService.buscarPacientePorID(id);
         if(pacienteBuscado.isPresent()){
+            logger.log(Level.INFO,"Paciente con id= " + id + " fue encontrado");
             return ResponseEntity.ok(pacienteBuscado.get());
         }else {
             //return ResponseEntity.notFound().build();
@@ -75,6 +85,7 @@ public class PacienteController {
         Optional<Paciente> pacienteBuscado = pacienteService.buscarPacientePorID(paciente.getId());
         if(pacienteBuscado.isPresent()){
             pacienteService.actualizarPaciente(paciente);
+            logger.log(Level.INFO,"paciente con id= " + paciente.getId() + " fue actualizado correctamente.");
             return ResponseEntity.ok("Se actualizo correctamente el paciente con id: "+paciente.getId()+" Nombre: "+paciente.getNombre());
         }else{
             throw new BadRequestException("El paciente con id: "+paciente.getId()+" no se encuentra.");
@@ -86,6 +97,7 @@ public class PacienteController {
     public ResponseEntity<Paciente> buscarPacientePorEmail(@PathVariable String email)throws ResourceNotFoundException{
         Optional<Paciente> pacienteBuscado= pacienteService.buscarPacientePorCorreo(email);
         if(pacienteBuscado.isPresent()){
+            logger.log(Level.INFO,"Paciente con email= " + email + " fue encontrado");
             return ResponseEntity.ok(pacienteBuscado.get());
         }else {
             throw new ResourceNotFoundException("El email ingresado no se encuentra.");
@@ -98,6 +110,7 @@ public class PacienteController {
     public ResponseEntity<Paciente> buscarPacientePorNombre(@PathVariable String nombre)throws  ResourceNotFoundException{
         Optional<Paciente> pacienteBuscado = pacienteService.buscarPacienteXNombre(nombre);
         if(pacienteBuscado.isPresent()){
+            logger.log(Level.INFO,"Paciente con nombre= " + nombre + " fue encontrado");
             return ResponseEntity.ok(pacienteBuscado.get());
         }else{
             throw new ResourceNotFoundException("Odontologo buscado por nombre es inexistente");

@@ -36,12 +36,6 @@ public class Paciente {
     @JsonIgnore //evitamos que sea un bucle infinito
     private Set<Turno> turnos= new HashSet<>(); // averiguar que diferencia hay entre un set o una lista
 
-    public Paciente(String jorgito, String pereyra, String s, LocalDate of, Domicilio domicilio, String s1) {
-    }
-
-    public Paciente() {
-
-    }
 
 
     @Override

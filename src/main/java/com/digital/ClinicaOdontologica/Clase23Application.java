@@ -15,9 +15,11 @@ public class Clase23Application {
 	private PacienteRepository pacienteRepository;
 	public static void main(String[] args) {
 
-		Odontologo odontologo=new Odontologo("ML365","Guillermina","Lopez");
-
 		SpringApplication.run(Clase23Application.class, args);
+
+
+
+		Odontologo odontologo=new Odontologo("ML365","Guillermina","Lopez");
 	}
 
 }

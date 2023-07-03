@@ -33,10 +33,9 @@ public class OdontologoService {
     }
     public void eliminarOdontologo(Long id){
         Optional<Odontologo> odontologoEliminar =buscarOdontologoPorId(id);
-        if(!odontologoEliminar.filter(odontologo -> odontologo.getId() != null && odontologo.getId() > 1).isPresent()){
-            LOGGER.error("debe ingresar un id valido");
-            return;
-        }
+//        if(!odontologoEliminar.filter(odontologo -> odontologo.getId() != null && odontologo.getId() < 1).isPresent()){
+//            LOGGER.error("Ingresar un id valido");
+//        }
         LOGGER.info("Se elimino Odontologo correctamente");
         odontologoRepository.deleteById(id);
     }

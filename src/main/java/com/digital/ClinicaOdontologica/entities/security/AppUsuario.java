@@ -15,7 +15,7 @@ import java.util.Collections;
 @Setter
 @Table(name = "usuarios")
 public class AppUsuario implements UserDetails {
-    //acale podemos decir si solo es unico ect
+    //aca le podemos decir si solo es unico ect
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

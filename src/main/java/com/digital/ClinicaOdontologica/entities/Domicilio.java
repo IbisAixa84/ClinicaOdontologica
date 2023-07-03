@@ -22,28 +22,5 @@ public class Domicilio {
     @Column
     private String provincia;
 
-    /*public Domicilio(String s, String s1, String laRioja, String laRioja1) {
-    }*/
-
-    public Domicilio() {
-    }
-
-    public Domicilio(String calle, String numero, String localidad, String provincia) {
-        this.calle = calle;
-        this.numero = numero;
-        this.localidad = localidad;
-        this.provincia = provincia;
-    }
-
-    @Override
-    public String toString() {
-        return "Domicilio{" +
-                "id=" + id +
-                ", calle='" + calle + '\'' +
-                ", numero='" + numero + '\'' +
-                ", localidad='" + localidad + '\'' +
-                ", provincia='" + provincia + '\'' +
-                '}';
-    }
 
 }
